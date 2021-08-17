@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricardo Pereira-Sobre</title>
+    <link rel="stylesheet" href="css/grelha.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+    <header>
+        <div class="logo"><a href="index.html"><img src="img/logo.png" alt="logo"></a></div>
+        <div class="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <ul>
+                <li class="active"><a href="sobre.html">Sobre</a></li>
+                <li><a href="mcg.html">MCG</a></li>
+                <li><a href="lobosolar.html">LoboSolar</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="textosobre" class="grid">
+            <div class="item-12">
+                <p>Gestor de Projetos com experiência demonstrada a trabalhar com corporações internacionais, em empresas industriais e de serviços. Foco e registro provado em gestão de projetos, liderança de equipas e actividades de optimização de custos. Capacitado em projetos de inovação e tecnologias de energia solar.</p>
+                <p>Project Manager with a demonstrated experience working with international corporations, in industrial and services companies. Focus and proven record in project management,  business development, team leadership, and cost optimization activities. Skilled in Innovation Projects, and Solar Energy Technologies.</p>
+                
+            </div>
+        </div>
+    </main>
+
+    <footer id="contactos" class="grid">
+        <div class="item-6">
+            <p>Pode contactar-me através de:</p>
+        </div>
+        <div class="item-6">
+            <ul>
+                <li>
+                    <a href="#"><img src="img/mail.png" alt="logo">ricardopereirak@gmail.com</a>
+                </li>
+                <li>
+                    <a href="tel:914142621"><img src="img/phone.png" alt="logo">914142621</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/ricardopereirak" target="_blank"><img src="img/linkedin.png" alt="logo">Linkedin.com/in/r.pereirak</a>
+                </li>
+            </ul>
+        </div>
+
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $('.burger').on('click', function(){
+            $(this).toggleClass('active');
+            $('nav').toggleClass('active');
+        })
+    </script>
+
+</body>
+
+</html>

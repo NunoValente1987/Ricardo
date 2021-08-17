@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricardo Pereira</title>
+    <link rel="stylesheet" href="css/grelha.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['gantt']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Task ID');
+            data.addColumn('string', 'Task Name');
+            data.addColumn('string', 'Resource');
+            data.addColumn('date', 'Start Date');
+            data.addColumn('date', 'End Date');
+            data.addColumn('number', 'Duration');
+            data.addColumn('number', 'Percent Complete');
+            data.addColumn('string', 'Dependencies');
+
+            data.addRows([
+                ['2000', 'Master Degree in Mechanical Engineering​', 'University of Coimbra',
+                    new Date(2000, 1, 1), new Date(2003, 1, 1), null, 60, null 
+      
+                ],
+                ['2003', 'SME Manager', 'Choina, LDA',
+                    new Date(2003, 1, 1), new Date(2011, 1, 1), null, 100, null
+                ],
+                ['2008', 'Degree in Renewable Energy Engineering ', 'University of Évora',
+                    new Date(2008, 1, 1), new Date(2011, 1, 1), null, 100, null
+                ],
+                ['2012a', 'Master in Solar Energy Engineering ​', 'University of Évora',
+                    new Date(2012, 1, 1), new Date(2014, 1, 1), null, 100, null
+                ],
+                ['2012', 'Project Manager / Product Development', 'LNEG',
+                    new Date(2012, 1, 1), new Date(2015, 1, 1), null, 100, null
+                ],
+                ['2015', 'Training', 'EPA',
+                    new Date(2015, 1, 1), new Date(2015, 12, 1), null, 100, null
+                ],
+                ['2016', 'Project Manager / Business Developer', 'Lobo Solar, LDA',
+                    new Date(2016, 1, 1), new Date(2017, 1, 1), null, 100, null
+                ],
+                ['2017', 'Project Manager / R&D Engineer ', 'MCG(Solar), LDA',
+                    new Date(2017, 1, 1), new Date(2020, 1, 1), null, 100, null
+                ],
+                ['2019', 'Advanced Program in Project Management and Evaluation​', 'Universidade Católica Portuguesa',
+                    new Date(2019, 1, 1), new Date(2020, 1, 1), null, 100, null
+                ],
+            ]);
+
+            var options = {
+                height: 400,
+                gantt: {
+                    trackHeight: 30,
+                },
+
+            
+      
+            };
+
+
+
+            var chart = new google.visualization.Gantt(document.getElementById('chart_div'));
+
+            chart.draw(data, options);
+        }
+    </script> 
+
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="index.html"><img src="img/logo.png" alt="logo"></a></div>
+        <div class="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="mcg.html">MCG</a></li>
+                <li><a href="lobosolar.html">LoboSolar</a></li>
+                <li><a href="contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+    <div id="banner" class="grid">
+        <div class="item-12">
+            <h1>Olá,<br>
+                <a href="#sobre">sou</a> o Ricardo<br> e <a href="#portefolio">trabalho</a> como<br> gestor de projetos.<br><br><a href="#contactos">Contacte-me.</a></h1>
+
+        </div>
+
+
+
+    </div>
+
+
+    <div id="sobre" class="grid">
+        <div class="imagem item-6"><img src="img/Ricardo.jpg" alt="Ricardo"></div>
+
+        <div class="item-6">
+            <p>Sou licenciado em Engenharia de Energias<br> Renováveis pela Universidade de Évora<br> e tenho uma pós-graduação de Gestão de<br> Projetos pela Universidade Católica Portuguesa.<br>
+                
+                <br> Para conhecer melhor o meu percurso,<br> faça o download do meu CV <a href="/img/CV-RicardoPereira.pdf" download>aqui</a>
+                    
+                  
+
+            </p>
+        </div>
+
+
+
+    </div>
+
+    <div class="grid">
+        <div class="item-12">
+            <div id="chart_div"></div>
+
+        </div>
+    </div>
+
+
+
+    <div id="portefolio" class="grid">
+
+        <h2 class="item-12">Portfólio</h2>
+        <div class="item-6">
+            <a href="mcg.html"><img src="img/mcg.jpg" alt="mcg"></a>
+        </div>
+        
+        <div class="item-6">
+            <a href="lobosolar.html"><img src="img/lobosolar.jpg" alt="lobosolar"></a>
+        </div>
+
+    </div>
+
+
+
+    </main>
+
+    <footer id="contactos" class="grid">
+        <div class="item-6">
+            <p>Pode contactar-me através de:</p>
+        </div>
+        <div class="item-6">
+            <ul>
+                <li>
+                    <a href="#"><img src="img/mail.png" alt="logo">ricardopereirak@gmail.com</a>
+                </li>
+                <li>
+                    <a href="tel:914142621"><img src="img/phone.png" alt="logo">914142621</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/ricardopereirak" target="_blank"><img src="img/linkedin.png" alt="logo">Linkedin.com/in/r.pereirak</a>
+                </li>
+            </ul>
+        </div>
+
+    </footer>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $('.burger').on('click', function(){
+            $(this).toggleClass('active');
+            $('nav').toggleClass('active');
+        })
+    </script>
+</body>
+
+</html>
