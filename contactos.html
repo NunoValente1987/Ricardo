@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricardo Pereira-Contactos</title>
+    <link rel="stylesheet" href="css/grelha.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="logo"><a href="index.html"><img src="img/logo.png" alt="logo"></a></div>
+        <div class="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+       
+        </div>
+        <nav>
+            <ul>
+                
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="mcg.html">MCG</a></li>
+                <li><a href="lobosolar.html">LoboSolar</a></li>
+                <li class="active"><a href="contactos.html">Contactos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+    <div class="contact-text">
+        <h1>Entre em contacto...</h1>
+    </div>
+
+
+
+    <div class="contact-form">
+
+            <form id="contact-form" method="POST" action="https://ultimafuncao.azurewebsites.net/api/Ricardov1?">
+                
+                <input name="name" type="text" class="form-control" placeholder="Nome" required><br>
+
+                <input name="email" type="email" class="form-control" placeholder="E-mail" required><br>
+
+                <textarea name="message" class="form-control" placeholder="Mensagem" rows="6" required></textarea><br>
+
+                <input type="submit" class="form-control submit" value="Enviar Mensagem">
+
+            </form>
+
+
+    </div>
+
+    </main>
+
+    <footer id="contactos" class="grid">
+        <div class="item-6">
+            <p>Ou pode contactar-me através de:</p>
+        </div>
+        <div class="item-6">
+            <ul>
+                
+                <li>
+                    <a href="tel:914142621"><img src="img/phone.png" alt="logo">914142621</a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/ricardopereirak" target="_blank"><img src="img/linkedin.png" alt="logo">Linkedin.com/in/r.pereirak</a>
+                </li>
+            </ul>
+        </div>
+
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $('.burger').on('click', function(){
+            $(this).toggleClass('active');
+            $('nav').toggleClass('active');
+        })
+
+        var contactForm = document.getElementById("contact-form");
+        fetch("https://ultimafuncao.azurewebsites.net/api/Ricardov1?", {
+            method: 'post',
+            body: JSON.stringify(payload)
+        })
+    </script>
+
+</body>
+
+</html>
